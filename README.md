@@ -87,7 +87,7 @@ export function generateHeaders(method, pathAndQuery, body = "") {
 
 ---
 
- # TURNKEY 
+ # Turnkey: 
 
  ## What is Turnkey?
 Turnkey provides secure, scalable and programmable crypto infrastructure for embedded wallets and onchain transaction automation. This is like a Vault Manager in a Bank. When using turnkey you can move your crypto keys securly without ever compromising in security or storing localy.
