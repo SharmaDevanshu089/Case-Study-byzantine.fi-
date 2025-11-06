@@ -30,7 +30,7 @@ The Api Guide book clearly specify before any Requests the application needs aut
 
 Header |	Description
 ----------|--------------
-X-Pubkey  |	Your public key derived from your private key (hex format with 0x prefix)
-X-Timestamp |	Current Unix timestamp in seconds
-X-Signature |	ECDSA signature of the request (DER-encoded hex with 0x prefix)
-Content-Type |	Must be application/json
+`X-Pubkey`  |	Your public key derived from your private key (hex format with 0x prefix)
+`X-Timestamp` |	Current Unix timestamp in seconds
+`X-Signature` |	ECDSA signature of the request (DER-encoded hex with 0x prefix)
+`Content-Type` |	Must be application/json
