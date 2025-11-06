@@ -126,4 +126,16 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
 | `turnkey_enclave_encrypt` | Utilities to decrypt and encrypt data from and to Turnkey secure enclaves | [![Latest](https://img.shields.io/crates/v/turnkey_enclave_encrypt.svg)](https://crates.io/crates/turnkey_enclave_encrypt) | [![docs.rs](https://img.shields.io/docsrs/turnkey_enclave_encrypt)](https://docs.rs/turnkey_enclave_encrypt) | [CHANGELOG](./enclave_encrypt/CHANGELOG.md) | [`enclave_encrypt`](./enclave_encrypt/) |
 | `turnkey_proofs` | Utilities to verify Turnkey secure enclave proofs | [![Latest](https://img.shields.io/crates/v/turnkey_proofs.svg)](https://crates.io/crates/turnkey_proofs) | [![docs.rs](https://img.shields.io/docsrs/turnkey_proofs)](https://docs.rs/turnkey_proofs) | [CHANGELOG](./proofs/CHANGELOG.md) | [`proofs`](./proofs/) |
 
+## Integration of TurnKey with Byzantine
+
+From the product documentation and my analysis, TurnKey is likely used as the **key-management and signing layer** inside Byzantine’s infrastructure. 
+
+Byzantine’s API exposes secure ECDSA-signed requests (with headers such as `X-Pubkey`, `X-Signature`), which aligns with TurnKey’s model of **non-custodial signing using hardware enclaves**. 
+
+When institutions or integrators perform automated transactions (like lending or withdrawals) through Byzantine’s REST API:
+1. Byzantine prepares the transaction payload.
+2. TurnKey signs the transaction inside its secure enclave (never exposing the private key).
+3. Byzantine submits the signed transaction to the blockchain network.
+
+This architecture allows Byzantine to maintain *automation and compliance* while keeping *cryptographic keys secure* and *under institutional control*.
 
