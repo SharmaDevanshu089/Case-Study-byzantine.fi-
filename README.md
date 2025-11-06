@@ -93,4 +93,4 @@ export function generateHeaders(method, pathAndQuery, body = "") {
 Turnkey provides secure, scalable and programmable crypto infrastructure for embedded wallets and onchain transaction automation. This is like a Vault Manager in a Bank. When using turnkey you can move your crypto keys securly without ever compromising in security or storing localy.
 
 ## Why is Turnkey?
- Coin Key is a one of the most valuble things in a Crypto Circlution. 
+ Coin Key is a one of the most valuble things in a Crypto Circlution. And holding the is more difficult. Storing the key in a server and / or in a client envirment is prone to malvare attack or even ram leak. ***Turnkey *** solves this problem by storing the key in a secure enclave with various level of encription.
