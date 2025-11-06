@@ -94,3 +94,5 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
 
 ## Why is Turnkey?
  Coin Key is a one of the most valuble things in a Crypto Circlution. And holding the is more difficult. Storing the key in a server and / or in a client envirment is prone to malvare attack or even ram leak. ***Turnkey*** solves this problem by storing the key in a secure enclave with various level of encription. It is like bank teller it opens its api to sign or transver the keys but never let end user or even server acess the key.
+
+ ## Important 
