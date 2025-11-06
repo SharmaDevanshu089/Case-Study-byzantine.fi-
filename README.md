@@ -23,3 +23,14 @@ Their Website Specify how they are Using money to Show the returns. Firstly majo
 The byzantine.fi exposes various apis with both ***REST*** and ***https***. This makes me think they are built with automation as well as third party interface integrations. 
 #### Why would a Investment application need automations ? 
 In my Opinion this was probably done to help the bots directly fetch and flood the application without any human intervention  and the web apis problably so that others can integrate it with their application. 
+
+## How to Interact with the APIS? 
+
+The Api Guide book clearly specify before any Requests the application needs authentication headers, the 4 main headers specified in the Documentation are: 
+
+Header |	Description
+----------|--------------
+X-Pubkey  |	Your public key derived from your private key (hex format with 0x prefix)
+X-Timestamp |	Current Unix timestamp in seconds
+X-Signature |	ECDSA signature of the request (DER-encoded hex with 0x prefix)
+Content-Type |	Must be application/json
