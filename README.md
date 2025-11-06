@@ -115,3 +115,13 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
  - ***Root quorum:*** A pre-determined consensus threshold that consists of a set of Root Users. This consensus threshold must be reached in order for any root permissions to take place.
 
  - ***Wallets:*** A collection of cryptographic private/public key pairs that share a common seed. HD seed phrases can generate multiple wallet accounts (addresses) for signing operations.
+
+
+ ## Turnkey for Rust: 
+ The turnkey provides 4 Different crates for rust:
+ | Crate | Description | crates.io | Docs | Changelog | Source |
+| ----- | ----------- | --------- | -----| ----------| ------ |
+| `turnkey_api_key_stamper` | Utilities to use Turnkey API keys | [![Latest](https://img.shields.io/crates/v/turnkey_api_key_stamper.svg)](https://crates.io/crates/turnkey_api_key_stamper) | [![docs.rs](https://img.shields.io/docsrs/turnkey_api_key_stamper)](https://docs.rs/turnkey_api_key_stamper) | [CHANGELOG](./api_key_stamper/CHANGELOG.md) | [`api_key_stamper`](./api_key_stamper/) |
+| `turnkey_client` | Rust client to interact with the Turnkey API | [![Latest](https://img.shields.io/crates/v/turnkey_client.svg)](https://crates.io/crates/turnkey_client) | [![docs.rs](https://img.shields.io/docsrs/turnkey_client)](https://docs.rs/turnkey_client) | [CHANGELOG](./client/CHANGELOG.md) | [`client`](./client/) |
+| `turnkey_enclave_encrypt` | Utilities to decrypt and encrypt data from and to Turnkey secure enclaves | [![Latest](https://img.shields.io/crates/v/turnkey_enclave_encrypt.svg)](https://crates.io/crates/turnkey_enclave_encrypt) | [![docs.rs](https://img.shields.io/docsrs/turnkey_enclave_encrypt)](https://docs.rs/turnkey_enclave_encrypt) | [CHANGELOG](./enclave_encrypt/CHANGELOG.md) | [`enclave_encrypt`](./enclave_encrypt/) |
+| `turnkey_proofs` | Utilities to verify Turnkey secure enclave proofs | [![Latest](https://img.shields.io/crates/v/turnkey_proofs.svg)](https://crates.io/crates/turnkey_proofs) | [![docs.rs](https://img.shields.io/docsrs/turnkey_proofs)](https://docs.rs/turnkey_proofs) | [CHANGELOG](./proofs/CHANGELOG.md) | [`proofs`](./proofs/) |
