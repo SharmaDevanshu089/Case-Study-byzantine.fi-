@@ -17,4 +17,9 @@ I have been Reading about *byzantine.fi* for few moments , according to their we
  - Transparent reporting: Real-time visibility on portfolio and performance.
  - Byzantine Prime is built to deliver MMF-like safety, S&P-level returns, and modern liquidity - without forcing treasurers to compromise between performance and trust.
 
-Their Website Specify how they are Using money to Show the returns. Firstly major Corpos can flood their excess **liquidity** to them and their dev docs specify they expose ***unified, composable, and simple to use*** . These money gets converted to 
+Their Website Specify how they are Using money to Show the returns. Firstly major Corpos can flood their excess **liquidity** to them and their dev docs specify they expose ***unified, composable, and simple to use*** . These money gets converted to digital ***StableCoins***, which are know for their remarkable stablity as they are backed by govts. This money which recently has been converted to Stable Coin emits same value of the currency they repesent . Which is then lent to various institutions. 
+
+### Developers Perspective :
+The byzantine.fi exposes various apis with both ***REST*** and ***https***. This makes me think they are built with automation as well as third party interface integrations. 
+#### Why would a Investment application need automations ? 
+In my Opinion this was probably done to help the bots directly fetch and flood the application without any human intervention  and the web apis problably so that others can integrate it with their application. 
