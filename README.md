@@ -97,21 +97,21 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
 
  ## Core Conecpts:
 
- ***Organizations (parent orgs)***: The initial parent organization typically represents an entire Turnkey-powered application.
+ - ***Organizations (parent orgs)***: The initial parent organization typically represents an entire Turnkey-powered application.
 
-***Sub-organizations (sub-orgs)***: Fully segregated organizations, typically representing an end user, nested under the parent organization. Parent orgs cannot modify the contents of a sub-org.
+ - ***Sub-organizations (sub-orgs)***: Fully segregated organizations, typically representing an end user, nested under the parent organization. Parent orgs cannot modify the contents of a sub-org.
 
-***Resources***: All identifiers within parent orgs such as users, policies, and wallets are collectively referred to as resources.
+ - ***Resources***: All identifiers within parent orgs such as users, policies, and wallets are collectively referred to as resources.
 
-***Users:*** Resources within organizations or sub-organizations that can submit activities to Turnkey via a valid credential.
+ - ***Users:*** Resources within organizations or sub-organizations that can submit activities to Turnkey via a valid credential.
 
-***Authenticators:*** Each parent org, sub-org and user contain their own sets of authenticators that you can configure, including their own wallets, API keys, and private keys.
+ - ***Authenticators:*** Each parent org, sub-org and user contain their own sets of authenticators that you can configure, including their own wallets, API keys, and private keys.
 
-***Activities:*** All actions Organizations can take such as signing transactions or creating users are known as activities.
+ - ***Activities:*** All actions Organizations can take such as signing transactions or creating users are known as activities.
 
-***Policies:*** Policies govern all activities and permissions within Organizations.
-***Root users:*** Users with root permissions, meaning they can bypass the policy engine to take any action within that specific organization.
+ - ***Policies:*** Policies govern all activities and permissions within Organizations.
+ - ***Root users:*** Users with root permissions, meaning they can bypass the policy engine to take any action within that specific organization.
 
-***Root quorum:*** A pre-determined consensus threshold that consists of a set of Root Users. This consensus threshold must be reached in order for any root permissions to take place.
+ - ***Root quorum:*** A pre-determined consensus threshold that consists of a set of Root Users. This consensus threshold must be reached in order for any root permissions to take place.
 
-***Wallets:*** A collection of cryptographic private/public key pairs that share a common seed. HD seed phrases can generate multiple wallet accounts (addresses) for signing operations.
+ - ***Wallets:*** A collection of cryptographic private/public key pairs that share a common seed. HD seed phrases can generate multiple wallet accounts (addresses) for signing operations.
