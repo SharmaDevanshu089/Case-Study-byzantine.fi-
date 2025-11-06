@@ -34,3 +34,52 @@ Header |	Description
 `X-Timestamp` |	Current Unix timestamp in seconds
 `X-Signature` |	ECDSA signature of the request (DER-encoded hex with 0x prefix)
 `Content-Type` |	Must be application/json
+
+### Here are some more Requirement by their apis:
+
+ - `timestamp`: Unix timestamp in seconds.
+ - `HTTP method in uppercase`: Like `GET` or `POST`.
+ - Hashing the message using SHA-256.
+ - Encoding the signature in DER format and converting to hex.
+ - Signing the hash with your private key using ECDSA (secp256k1 curve).
+
+ ## Basic Nodejs Example : 
+
+ ```
+ import elliptic from "elliptic";
+import { createHash } from "crypto";
+
+const EC = elliptic.ec;
+const ec = new EC("p256");
+
+const INTEGRATOR_PRIVATE_KEY = process.env.INTEGRATOR_PRIVATE_KEY;
+
+export function generateHeaders(method, pathAndQuery, body = "") {
+  // Get the key pair
+  const cleanPrivateKey = INTEGRATOR_PRIVATE_KEY.replace(/^0x/, "");
+  const keyPair = ec.keyFromPrivate(cleanPrivateKey, "hex");
+  const publicKey = "0x" + keyPair.getPublic(true, "hex");
+
+  // Get the timestamp in seconds since the Unix epoch (UTC)
+  const timestamp = Math.floor(Date.now() / 1000).toString();
+
+  // Build the message to sign
+  // Format: {timestamp}{method}{path_and_query}{body}
+  const bodyStr = typeof body === "object" ? JSON.stringify(body) : body;
+  const message = `${timestamp}${method.toUpperCase()}${pathAndQuery}${bodyStr}`;
+
+  // Hash the message and sign it
+  const messageHash = createHash("sha256").update(message).digest();
+  const signature = keyPair.sign(messageHash);
+
+  // Encode the signature in DER then in hex
+  const signatureHex = "0x" + signature.toDER("hex");
+
+  return {
+    "X-Pubkey": publicKey,
+    "X-Timestamp": timestamp,
+    "X-Signature": signatureHex,
+    "Content-Type": "application/json",
+  };
+}
+ ```
