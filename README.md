@@ -103,7 +103,7 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
 
 ***Resources***: All identifiers within parent orgs such as users, policies, and wallets are collectively referred to as resources.
 
-***Users: ***Resources within organizations or sub-organizations that can submit activities to Turnkey via a valid credential.
+***Users:*** Resources within organizations or sub-organizations that can submit activities to Turnkey via a valid credential.
 
 ***Authenticators:*** Each parent org, sub-org and user contain their own sets of authenticators that you can configure, including their own wallets, API keys, and private keys.
 
