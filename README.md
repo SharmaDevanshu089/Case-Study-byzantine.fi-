@@ -95,4 +95,14 @@ Turnkey provides secure, scalable and programmable crypto infrastructure for emb
 ## Why is Turnkey?
  Coin Key is a one of the most valuble things in a Crypto Circlution. And holding the is more difficult. Storing the key in a server and / or in a client envirment is prone to malvare attack or even ram leak. ***Turnkey*** solves this problem by storing the key in a secure enclave with various level of encription. It is like bank teller it opens its api to sign or transver the keys but never let end user or even server acess the key.
 
- ## Important 
+ ## Core Conecpts:
+ ***Organizations (parent orgs)***: The initial parent organization typically represents an entire Turnkey-powered application.
+***Sub-organizations (sub-orgs)***: Fully segregated organizations, typically representing an end user, nested under the parent organization. Parent orgs cannot modify the contents of a sub-org.
+***Resources***: All identifiers within parent orgs such as users, policies, and wallets are collectively referred to as resources.
+***Users: ***Resources within organizations or sub-organizations that can submit activities to Turnkey via a valid credential.
+***Authenticators:*** Each parent org, sub-org and user contain their own sets of authenticators that you can configure, including their own wallets, API keys, and private keys.
+***Activities:*** All actions Organizations can take such as signing transactions or creating users are known as activities.
+***Policies:*** Policies govern all activities and permissions within Organizations.
+***Root users:*** Users with root permissions, meaning they can bypass the policy engine to take any action within that specific organization.
+***Root quorum:*** A pre-determined consensus threshold that consists of a set of Root Users. This consensus threshold must be reached in order for any root permissions to take place.
+***Wallets:*** A collection of cryptographic private/public key pairs that share a common seed. HD seed phrases can generate multiple wallet accounts (addresses) for signing operations.
